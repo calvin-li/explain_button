@@ -1,15 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "One-click Kittens",
-  "description": "This extension demonstrates a 'browser action' with kittens.",
+  "name": "Instantly Explain XKCD",
+  "description": "Adds a button to xkcd comics linking to the explain-xkcd page",
   "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "https://secure.flickr.com/"
+  "content_scripts": [
+    {
+      "matches": ["*://xkcd.com/*"],
+      "js": ["button.js"]
+    }
   ]
+
 }
